@@ -33,6 +33,13 @@ a:hover {
   color: white;
 }
 
+.flex{
+  display: flex;
+}
+
+
+
+
 /* REGOLE ASIDE */
 
 aside {
@@ -40,22 +47,31 @@ aside {
   height: 100%;
   background-color: #000000;
   line-height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-aside>img {
+#logo {
   width: 60%;
   margin-top: 15px;
   margin-left: 15px;
 }
 
+/* Aside nav */
+
 #aside-nav {
   margin: 20px 0;
 }
 
-#aside-nav>div {
-  display: flex;
+#aside-nav div {
   align-items: center;
   padding-left: 15px;
+  margin: 5px 0;
+}
+
+#aside-nav div:not(.white) {
+  margin-left: 2px;
 }
 
 #aside-nav img {
@@ -63,9 +79,11 @@ aside>img {
   margin-right: 15px;
 }
 
-#aside-nav>.white {
+#aside-nav .white {
   border-left: 2px solid #adff2f;
 }
+
+/* Aside playlist */
 
 #aside-playlist {
   margin-left: 15px;
@@ -82,6 +100,32 @@ aside>img {
 #aside-playlist>a:hover .fas.fa-plus{
   background-color: white;
 }
+
+/* Aside bottom */
+
+#aside-bottom {
+  padding: 15px;
+}
+
+#aside-bottom .far.fa-arrow-alt-circle-down {
+  margin-right: 5px;
+}
+
+#aside-bottom>div {
+  margin: 5px 0;
+}
+
+#aside-bottom>div:last-child {
+  padding-top: 5px;
+}
+
+#aside-bottom img {
+  width: 30px;
+  background-color: #929292;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
 
 
 /* REGOLE MAIN */
