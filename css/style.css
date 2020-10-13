@@ -42,8 +42,8 @@ a:hover {
 
 /* REGOLE ASIDE */
 
-aside {
-  width: 300px;
+#aside-large {
+  width: 250px;
   height: 100%;
   background-color: #000000;
   line-height: 30px;
@@ -53,7 +53,7 @@ aside {
 }
 
 #logo {
-  width: 60%;
+  width: 70%;
   margin-top: 15px;
   margin-left: 15px;
 }
@@ -119,28 +119,77 @@ aside {
   padding-top: 5px;
 }
 
-#aside-bottom img {
+.profile-img {
   width: 30px;
-  background-color: #080b12;
+  background-color: #929292;
   border-radius: 50%;
+}
+
+#aside-bottom .profile-img {
   margin-right: 10px;
 }
 
+@media all and (max-width:768px) {
+  #aside-large {
+    display: none;
+  }
+}
+
+
+
+
+/* ASIDE PHONE */
+
+#aside-phone {
+  width: 70px;
+  height: 100%;
+  background-color: #000000;
+  line-height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#aside-phone>div {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#aside-phone img {
+  width: 30px;
+}
+
+@media all and (min-width:769px) {
+  #aside-phone {
+    display: none;
+  }
+}
 
 
 
 /* REGOLE MAIN */
 
 main {
-  width: calc( 100vw - 300px);
+  width: calc( 100vw - 70px);
   height: 100%;
   background-color: #141922;
+  overflow: scroll;
 }
+
+@media all and (min-width:769px) {
+  main {
+    width: calc( 100vw - 250px);
+  }
+}
+
 
 /* main header - effettua upgrade */
 
 #main-header {
   position: sticky;
+  top: 0;
   background-color: rgba(8, 11, 18, 0.5);
   height: 100px;
   flex-direction: row-reverse;
@@ -158,6 +207,56 @@ main {
 #upgrade:hover {
   transform: scale(110%);
 }
+
+/* main nav */
+
+#main-nav {
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+#main-nav>a {
+  margin: 0 15px;
+}
+
+#main-nav>a:first-child {
+  border-bottom: 2px solid #adff2f;
+}
+
+/* main Recently Played */
+
+.main-section>.flex {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.album-block {
+  border: 1px solid white;
+  background-color: pink;
+  height: 300px;
+  width: calc(100% / 6);
+}
+
+/* @media all and (min-width:992px) and (max-width:1199px) {
+  .album-block {
+    width: calc(100% / 4);
+  }
+} */
+@media all and (min-width:769px) and (max-width:991px) {
+  .album-block {
+    width: calc(100% / 4);
+  }
+}
+@media all and (max-width:768px) {
+  .album-block {
+    width: calc(100% / 2);
+  }
+}
+
+
+
+
 
 /* REGOLE FOOTER */
 
