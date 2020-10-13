@@ -121,10 +121,11 @@ aside {
 
 #aside-bottom img {
   width: 30px;
-  background-color: #929292;
+  background-color: #080b12;
   border-radius: 50%;
   margin-right: 10px;
 }
+
 
 
 
@@ -136,8 +137,27 @@ main {
   background-color: #141922;
 }
 
+/* main header - effettua upgrade */
 
+#main-header {
+  position: sticky;
+  background-color: rgba(8, 11, 18, 0.5);
+  height: 100px;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding-right: 30px;
+}
 
+#upgrade {
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 10px 30px;
+  transition: 0.5s;
+}
+
+#upgrade:hover {
+  transform: scale(110%);
+}
 
 /* REGOLE FOOTER */
 
