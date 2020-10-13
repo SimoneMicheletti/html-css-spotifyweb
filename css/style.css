@@ -7,13 +7,14 @@
 }
 
 #big-container {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 70px);
   display: flex;
 }
 
 body {
   color: #929292;
   font-family: 'Signika', sans-serif;
+  font-size: 13px;
 }
 
 ul {
@@ -50,6 +51,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow-y: hidden;
 }
 
 #logo {
@@ -87,6 +89,14 @@ a:hover {
 
 #aside-playlist {
   margin-left: 15px;
+  flex-grow: 1;
+  height: 100px;
+  overflow-y: scroll;
+  flex-shrink: 0;
+}
+
+#aside-large .playlist-title {
+  margin-left: 15px;
 }
 
 #aside-playlist .fas.fa-plus {
@@ -100,6 +110,7 @@ a:hover {
 #aside-playlist>a:hover .fas.fa-plus{
   background-color: white;
 }
+
 
 /* Aside bottom */
 
@@ -175,7 +186,7 @@ main {
   width: calc( 100vw - 70px);
   height: 100%;
   background-color: #141922;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 @media all and (min-width:769px) {
@@ -184,17 +195,17 @@ main {
   }
 }
 
-
 /* main header - effettua upgrade */
 
 #main-header {
   position: sticky;
   top: 0;
-  background-color: rgba(8, 11, 18, 0.5);
-  height: 100px;
+  background-color: rgba(8, 11, 18, 0.8);
+  height: 70px;
   flex-direction: row-reverse;
   align-items: center;
   padding-right: 30px;
+  z-index: 900;
 }
 
 #upgrade {
@@ -226,23 +237,71 @@ main {
 
 /* main Recently Played */
 
+.main-section {
+  padding: 0 10px;
+  margin: 40px 10px;
+}
+
+.main-section>h2 {
+  padding-left: 10px;
+}
+
+.main-section>span {
+  padding-left: 10px;
+}
+
+
 .main-section>.flex {
   justify-content: flex-start;
   flex-wrap: wrap;
 }
 
 .album-block {
-  border: 1px solid white;
-  background-color: pink;
-  height: 300px;
   width: calc(100% / 6);
+  padding: 0 10px;
+  margin-top: 20px;
+  text-align: center;
 }
 
-/* @media all and (min-width:992px) and (max-width:1199px) {
-  .album-block {
-    width: calc(100% / 4);
-  }
-} */
+.album-img {
+  position: relative;
+}
+
+.album-img img {
+  width: 100%;
+}
+
+.layover-album {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(100% - 5px);
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.layover-album>.far.fa-play-circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% , -50%);
+  font-size: 50px;
+}
+
+.album-block:hover .layover-album {
+  display: block;
+}
+
+.artisti-popolari img {
+  border-radius: 50%;
+}
+
+.artisti-popolari .layover-album {
+  border-radius: 50%;
+}
+
+
 @media all and (min-width:769px) and (max-width:991px) {
   .album-block {
     width: calc(100% / 4);
@@ -261,6 +320,7 @@ main {
 /* REGOLE FOOTER */
 
 footer {
-  height: 100px;
+  height: 70px;
   background-color: #282828;
+  z-index: 900;
 }
