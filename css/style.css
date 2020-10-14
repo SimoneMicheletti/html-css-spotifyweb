@@ -265,36 +265,32 @@ main {
 
 .album-img {
   position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .album-img img {
   width: 100%;
 }
 
-.layover-album {
-  display: none;
+.album-img .far.fa-play-circle {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: calc(100% - 5px);
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-.layover-album>.far.fa-play-circle {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50% , -50%);
   font-size: 50px;
+  display: none;
 }
 
-.album-block:hover .layover-album {
+.album-block:hover .far.fa-play-circle {
   display: block;
 }
 
 .artisti-popolari img {
   border-radius: 50%;
+}
+
+.album-block:hover img {
+  filter: grayscale(0.8);
+  filter: brightness(0.3);
 }
 
 .artisti-popolari .layover-album {
